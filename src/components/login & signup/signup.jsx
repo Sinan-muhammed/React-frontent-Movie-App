@@ -1,20 +1,19 @@
+import React from "react"
+import Logo from '../logo/Movies.Hub.png'
 
-import React from 'react'
-import Logo from '../logo/image (1).png'
-import { Outlet, Link } from "react-router-dom";
 
-const login = () => {
-  return (
-    <>
-       <div className="w-full h-screen flex justify-center relative items-center  bg-black ">
+const Signup = ()=>{
+    return (
+        <>
+         <div className="w-full h-screen flex justify-center relative items-center  bg-black ">
       
-      <div className="relative right-56 w-64 ">
+         <div className="relative right-56 w-64 ">
               <img src={Logo} alt="logo" className='' />
       </div>
         
-        <div className="image-div relative min-w-[40%] h-[80%] flex justify-center items-center align-middle flex-col right-[65px]">
+      <div className="image-div relative min-w-[40%] h-[80%] flex justify-center items-center align-middle flex-col right-[65px]">
           
-          <h1 className="font-mono text-3xl  mb-12 text-white ">LOGIN</h1>
+          <h1 className="font-mono text-3xl  mb-12 text-white ">Signup</h1>
             <form >
               <div className="flex flex-col  justify-center items-center ">
               <div className="mb-4">
@@ -29,25 +28,33 @@ const login = () => {
               </div>
               <div className="mb-6">
                 
+                <input type="email" id="email" placeholder="Email" className=" min-w-80 min-h-10 placeholder-black pl-6"/>
+              </div>
+              <div className="mb-6">
+                
                 <input type="password" id="password" placeholder="Password " className=" min-w-80 min-h-10 placeholder-black pl-6"/>
+              </div>
+              <div className="mb-6">
+                
+                <input type="password" id="password" placeholder="Confirm Password" className=" min-w-80 min-h-10 placeholder-black pl-6"/>
               </div>
               </div>
               <div className="min-w-80 min-h-10  flex justify-end items-center gap-32 mt-6">
-                <Link className='text-bold text-white relative left-[16px] bottom-[29px]'>Forgot Password</Link>
                
               <button
                 type="submit"
                 className=" min-w-24 rounded-full bg-indigo-500 text-white py-2 px-4  hover:bg-indigo-600 "
               >
-               Login
+               Signup
               </button>
               </div>
             </form>
-              <h1 className='relative text-white text-bold top-[120px]'>Dont have an Account? <Link to='/signup'>Signup</Link> </h1>
+              
           </div>
       </div>
     </>
-  )
+       
+    )
 }
 
-export default login
+export default Signup

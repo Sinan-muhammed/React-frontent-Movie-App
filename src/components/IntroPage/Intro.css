@@ -1,0 +1,30 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Main{
+    height: 600px;
+    width: 750px;
+    background-image: url('../src/components/IntroPage/1.png');
+    background-size: 100% 100%;
+    /* opacity: 0.5; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Main-One{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.441);
+  }
+  .button-intro{
+    border-radius: 20px;
+  }
+  .button-intro:hover{
+    background-color: rgba(51, 51, 130, 0.722);
+  }

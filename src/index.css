@@ -3,19 +3,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: black;
   margin: 0;
   padding: 0;
 }
+
 .image-div{
-  background-image: url('../src/assets/components/loginimage/bg_img.jpg');
+  width: 500px;
+  background-image: url('../src/components/loginimage/bg_img.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .image-div.background-image{
   opacity: 0.5;
 }
@@ -27,9 +29,11 @@ input{
 body::-webkit-scrollbar{
   display: none;
 }
+
 .input-wrapper{
   background-color: rgb(31, 28, 28);
-  width: 400px;
+  width: 100%; /* Change width to 100% for responsiveness */
+  max-width: 400px; /* Add max-width to limit the width on larger screens */
   height: 2.5rem;
   padding: 0 15px;
   box-shadow: 0px 0px 8px #070707;
@@ -37,7 +41,9 @@ body::-webkit-scrollbar{
   align-items: center;
   border-radius: 20px;
   gap: 10px;
+  margin: 0 auto; /* Center the input wrapper */
 }
+
 .search-input{
   background-color: transparent;
   height: 2.5rem;
@@ -52,23 +58,94 @@ body::-webkit-scrollbar{
 .search-input:focus{
   outline: none;
 }
+
 #search-icon{
   color: #424242;
   margin-left: 10px;
 }
+
 .nav{
   position: static;
   display: block;
 }
+
 .category-button{
   height: 2.5rem;
   background-color: rgb(50, 51, 51);
   color: white;
-  width: 155px;
+  width: 100%; /* Change width to 100% for responsiveness */
+  max-width: 155px; /* Add max-width to limit the width on larger screens */
   border-radius: 25px;
   font-weight: 400;
+  margin: 10px auto; /* Center the button */
 }
+
 .category-button:hover{
   background-color: rgb(139, 157, 23);
   font-weight: 800;
 }
+
+
+
+
+
+/* For small screens */
+@media screen and (max-width: 640px) {
+  .input-wrapper {
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .posters {
+    padding: 5px;
+    gap: 5px;
+    overflow-x: auto;
+  }
+
+  .text-white {
+    top: 0;
+  }
+}
+
+/* For medium screens */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .input-wrapper {
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  .posters {
+    padding: 10px;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .text-white {
+    top: 40px;
+  }
+}
+
+/* For large screens */
+@media screen and (min-width: 1025px) {
+  .input-wrapper {
+    left: 50px;
+    top: 50px;
+    width: 400px;
+    padding: 0 15px;
+  }
+
+  .posters {
+    padding: 20px;
+    gap: 20px;
+    overflow-x: auto;
+  }
+
+  .text-white {
+    top: 80px;
+  }
+}
+
